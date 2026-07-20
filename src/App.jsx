@@ -1,5 +1,7 @@
+import TasksPage from "./features/pages/TaskPage";
+
 function App() {
-  return <h1 className="text-3xl font-bold text-blue-600">Funciona</h1>;
+  return <TasksPage />;
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useTaskStore } from './useTaskStore';
+import { useTaskStore } from '../store/useTaskStore';
 
 export function useTasks() {
   const { tasks, loading, error, loadTasks } = useTaskStore();
