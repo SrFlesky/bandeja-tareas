@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { fetchTasks, updateTask } from "../services/taskService";
 
 export const useTaskStore = create((set, get) => ({
   tasks: [],
@@ -11,6 +12,7 @@ export const useTaskStore = create((set, get) => ({
       const tasks = await fetchTasks();
       set({ tasks, loading: false });
     } catch (error) {
+      console.log(error);
       set({ error: error.message, loading: false });
     }
   },
