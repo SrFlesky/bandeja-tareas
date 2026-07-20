@@ -1,6 +1,9 @@
 import { TASK_STATUS_LIST } from "../../../constants/taskStatus";
 import { TASK_PRIORITY_LIST } from "../../../constants/taskPriority";
 import { TASK_PROCESS_LIST } from "../../../constants/taskProcess";
+import mockEmployees from "../../../data/mockEmployees.json";
+
+let EMPLOYEES_LIST = [...mockEmployees];
 
 export const filterConfig = [
   { field: "status", label: "Estado", options: TASK_STATUS_LIST },
