@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "title": "Renovar licencia de software contable",
+    "process": "Contabilidad",
+    "assignedTo": "Camila Rojas",
+    "priority": "Alta",
+    "status": "Pendiente",
+    "createdAt": "2026-07-01T08:20:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Revisar solicitud de crédito cliente 3312",
+    "process": "Cartera",
+    "assignedTo": "Felipe Ordóñez",
+    "priority": "Media",
+    "status": "En Progreso",
+    "createdAt": "2026-07-01T10:05:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Aprobar diseño de campaña julio",
+    "process": "Marketing",
+    "assignedTo": "Valentina Cruz",
+    "priority": "Media",
+    "status": "Pendiente",
+    "createdAt": "2026-07-01T13:40:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Cerrar ticket soporte servidor caído",
+    "process": "TI",
+    "assignedTo": "Esteban Vargas",
+    "priority": "Alta",
+    "status": "Completada",
+    "createdAt": "2026-07-02T07:55:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Actualizar inventario bodega sur",
+    "process": "Logística",
+    "assignedTo": "Natalia Peña",
+    "priority": "Baja",
+    "status": "Pendiente",
+    "createdAt": "2026-07-02T11:15:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Revisar backup diario base de datos",
+    "process": "TI",
+    "assignedTo": "Esteban Vargas",
+    "priority": "Alta",
+    "status": "En Progreso",
+    "createdAt": "2026-07-02T16:30:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Aprobar presupuesto evento corporativo",
+    "process": "Marketing",
+    "assignedTo": "Valentina Cruz",
+    "priority": "Media",
+    "status": "Pendiente",
+    "createdAt": "2026-07-03T09:00:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Validar pago proveedor internacional",
+    "process": "Tesorería",
+    "assignedTo": "Jorge Salcedo",
+    "priority": "Alta",
+    "status": "Pendiente",
+    "createdAt": "2026-07-03T12:20:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Revisar cartera vencida junio",
+    "process": "Cartera",
+    "assignedTo": "Felipe Ordóñez",
+    "priority": "Alta",
+    "status": "Completada",
+    "createdAt": "2026-07-04T08:10:00Z"
+  },
+  {
+    "id": 10,
+    "title": "Actualizar página web institucional",
+    "process": "Marketing",
+    "assignedTo": "Daniela Cárdenas",
+    "priority": "Baja",
+    "status": "En Progreso",
+    "createdAt": "2026-07-04T14:00:00Z"
+  },
+  {
+    "id": 11,
+    "title": "Auditar accesos a sistema financiero",
+    "process": "Auditoría",
+    "assignedTo": "Mauricio Lozano",
+    "priority": "Alta",
+    "status": "Pendiente",
+    "createdAt": "2026-07-05T09:30:00Z"
+  },
+  {
+    "id": 12,
+    "title": "Programar mantenimiento red eléctrica",
+    "process": "Infraestructura",
+    "assignedTo": "Sebastián Roa",
+    "priority": "Media",
+    "status": "Pendiente",
+    "createdAt": "2026-07-05T15:45:00Z"
+  },
+  {
+    "id": 13,
+    "title": "Revisar flujo de caja semanal",
+    "process": "Tesorería",
+    "assignedTo": "Jorge Salcedo",
+    "priority": "Media",
+    "status": "Completada",
+    "createdAt": "2026-07-06T08:00:00Z"
+  },
+  {
+    "id": 14,
+    "title": "Actualizar contrato proveedor logístico",
+    "process": "Legal",
+    "assignedTo": "Isabela Nieto",
+    "priority": "Alta",
+    "status": "En Progreso",
+    "createdAt": "2026-07-06T11:50:00Z"
+  },
+  {
+    "id": 15,
+    "title": "Aprobar solicitud de compra insumos TI",
+    "process": "TI",
+    "assignedTo": "Esteban Vargas",
+    "priority": "Baja",
+    "status": "Pendiente",
+    "createdAt": "2026-07-07T09:15:00Z"
+  },
+  {
+    "id": 16,
+    "title": "Revisar métricas de campaña digital",
+    "process": "Marketing",
+    "assignedTo": "Daniela Cárdenas",
+    "priority": "Media",
+    "status": "Pendiente",
+    "createdAt": "2026-07-07T13:00:00Z"
+  },
+  {
+    "id": 17,
+    "title": "Cerrar auditoría interna trimestral",
+    "process": "Auditoría",
+    "assignedTo": "Mauricio Lozano",
+    "priority": "Alta",
+    "status": "Completada",
+    "createdAt": "2026-07-08T08:40:00Z"
+  },
+  {
+    "id": 18,
+    "title": "Validar orden de despacho urgente",
+    "process": "Logística",
+    "assignedTo": "Natalia Peña",
+    "priority": "Alta",
+    "status": "Pendiente",
+    "createdAt": "2026-07-08T12:10:00Z"
+  },
+  {
+    "id": 19,
+    "title": "Renovar póliza responsabilidad civil",
+    "process": "Legal",
+    "assignedTo": "Isabela Nieto",
+    "priority": "Media",
+    "status": "En Progreso",
+    "createdAt": "2026-07-09T09:20:00Z"
+  },
+  {
+    "id": 20,
+    "title": "Revisar solicitud de reembolso viáticos",
+    "process": "Contabilidad",
+    "assignedTo": "Camila Rojas",
+    "priority": "Baja",
+    "status": "Pendiente",
+    "createdAt": "2026-07-09T14:35:00Z"
+  },
+  {
+    "id": 21,
+    "title": "Aprobar plan de mantenimiento anual",
+    "process": "Infraestructura",
+    "assignedTo": "Sebastián Roa",
+    "priority": "Media",
+    "status": "Pendiente",
+    "createdAt": "2026-07-10T08:05:00Z"
+  },
+  {
+    "id": 22,
+    "title": "Revisar contrato arrendamiento oficina",
+    "process": "Legal",
+    "assignedTo": "Isabela Nieto",
+    "priority": "Alta",
+    "status": "Completada",
+    "createdAt": "2026-07-10T13:25:00Z"
+  },
+  {
+    "id": 23,
+    "title": "Actualizar credenciales acceso VPN",
+    "process": "TI",
+    "assignedTo": "Esteban Vargas",
+    "priority": "Media",
+    "status": "En Progreso",
+    "createdAt": "2026-07-11T09:45:00Z"
+  },
+  {
+    "id": 24,
+    "title": "Validar transferencia interbancaria",
+    "process": "Tesorería",
+    "assignedTo": "Jorge Salcedo",
+    "priority": "Alta",
+    "status": "Pendiente",
+    "createdAt": "2026-07-11T15:10:00Z"
+  },
+  {
+    "id": 25,
+    "title": "Revisar indicadores de cartera morosa",
+    "process": "Cartera",
+    "assignedTo": "Felipe Ordóñez",
+    "priority": "Media",
+    "status": "Pendiente",
+    "createdAt": "2026-07-12T08:30:00Z"
+  }
+]
