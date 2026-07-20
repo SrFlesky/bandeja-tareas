@@ -8,7 +8,16 @@ function TasksPage() {
 
   return (
     <div className="text-black">
-      <p1>Funciona</p1>
+      <ul>
+        {tasks.map((task) => (
+          <li key={task.id}>
+            <p>{task.title}</p>
+            <p>
+              {task.assignedTo} | {task.process} | {task.priority} | {task.status}
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
