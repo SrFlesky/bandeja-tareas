@@ -17,6 +17,11 @@ function FilterBar({ filters, toggleFilter }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleOptionClick = (field, option) => {
+    toggleFilter(field, option);
+    setIsOpen(false);
+  };
+
   return (
     <div style={{ position: "relative" }} ref={panelRef}>
       <button onClick={() => setIsOpen((prev) => !prev)}>
@@ -36,19 +41,22 @@ function FilterBar({ filters, toggleFilter }) {
           {filterConfig.map(({ field, label, options }) => (
             <div key={field}>
               <p>{label}</p>
-              {options.map((option) => (
-                <button
-                  key={option}
-                  onClick={() => toggleFilter(field, option)}
-                  style={{
-                    background: filters[field].includes(option)
-                      ? "var(--bg-accent)"
-                      : "transparent",
-                  }}
-                >
-                  {option}
-                </button>
-              ))}
+              {options.map((option) => {
+                const isActive = filters[field].includes(option);
+                return (
+                  <button
+                    key={option}
+                    onClick={() => handleOptionClick(field, option)}
+                    style={{
+                      background: isActive ? "var(--bg-accent)" : "transparent",
+                      fontWeight: isActive ? 500 : 400,
+                    }}
+                  >
+                    {option}
+                    {isActive && " ×"}
+                  </button>
+                );
+              })}
             </div>
           ))}
         </div>
