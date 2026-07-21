@@ -43,8 +43,10 @@ function FilterBar({ filters, toggleFilter }) {
       {isOpen && (
         <div
           className="
-            absolute top-full mt-2 left-0 z-20
-            w-72 max-h-96 overflow-y-auto
+            fixed inset-x-4 top-1/2 -translate-y-100 z-20
+            md:absolute md:inset-x-auto md:top-full md:translate-y-0 md:right-0 md:mt-2
+            max-h-96 overflow-y-auto
+            w-auto md:w-72
             bg-white rounded-card border border-ink-muted/15
             shadow-lg p-4
           "
