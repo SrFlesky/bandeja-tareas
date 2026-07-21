@@ -1,7 +1,11 @@
 import formatDate from "../../utils/formatDate";
 import { cn } from "../../../../shared/utils/cn";
-import { priorityColors, defaultPriorityColor } from "../../config/priorityColors";
+import {
+  priorityColors,
+  defaultPriorityColor,
+} from "../../config/priorityColors";
 import { PRIORITY_KEY_BY_LABEL } from "../../../../constants/taskPriority";
+import { X } from "lucide-react";
 
 function TaskDetail({ task, onClose }) {
   if (!task) return null;
@@ -16,15 +20,15 @@ function TaskDetail({ task, onClose }) {
         md:border-l md:border-gray-200
       "
     >
-      <div className="flex items-center justify-between mb-6 border-b border-ink-muted/20">
+      <div className="flex items-center justify-between mb-6 border-b pr-4 border-ink-muted/20">
         <h2 className="text-lg font-medium text-gray-900 p-5">
           Información relevante
         </h2>
         <button
           onClick={onClose}
-          className="min-h-11 min-w-11 flex items-center justify-center text-gray-400 hover:text-gray-600 p-5"
+          className="min-h-7 min-w-7 flex items-center transition-colors justify-center text-gray-400 hover:bg-tag-red-bg hover:text-tag-red rounded-md"
         >
-          ×
+          <X className="h-4 w-4" />
         </button>
       </div>
 
@@ -44,10 +48,7 @@ function TaskDetail({ task, onClose }) {
           <div className="bg-page-bg rounded-badge p-3">
             <p className="text-xs text-ink-muted mb-1">Prioridad</p>
             <p
-              className={cn(
-                "text-sm font-semibold, rounded-md",
-                priorityColor
-              )}
+              className={cn("text-sm font-semibold, rounded-md", priorityColor)}
             >
               {task.priority}
             </p>

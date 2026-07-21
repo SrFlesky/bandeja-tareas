@@ -59,6 +59,7 @@ function TaskCard({ task, onClick }) {
         <span
           className={cn(
             "text-xs font-medium px-2 py-0.5 rounded-pill",
+            priorityColor.badge,
             priorityColor.text
           )}
         >

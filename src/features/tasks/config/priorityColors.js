@@ -1,7 +1,7 @@
 export const priorityColors = {
-  HIGH: "bg-tag-red-bg text-priority-high",
-  MID: "bg-tag-amber-bg text-priority-mid",
-  LOW: "bg-tag-green-bg text-priority-low",
+  HIGH: { badge: "bg-tag-red-bg", text: "text-priority-high"},
+  MID: { badge: "bg-tag-amber-bg", text: "text-priority-mid"},
+  LOW: { badge: "bg-tag-green-bg", text: "text-priority-low"},
 };
 
 export const defaultPriorityColor = {
