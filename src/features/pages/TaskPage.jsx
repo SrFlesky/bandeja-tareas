@@ -7,6 +7,7 @@ import SearchBar from "../tasks/components/SearchBar/SearchBar";
 import FilterBar from '../tasks/components/FilterBar/FilterBar';
 import SortButton from "../tasks/components/SortButton/SortButton";
 import TaskDetail from '../tasks/components/TaskDetail/TaskDetail';
+import TaskCard from "../tasks/components/TaskCard/TaskCard";
 import { searchTasks } from "../tasks/utils/searchTasks";
 import { filterTasks } from '../tasks/utils/filterTasks';
 import { sortTasks } from "../tasks/utils/sortTasks";
@@ -27,7 +28,7 @@ function TasksPage() {
   const sortedTasks = sortTasks(filteredTasks, sortOrder); 
 
   return (
-    <div className="p-6 max-w-2xl mx-auto">
+    <div className="px-4 py-4 md:px-8 md:py-6 max-w-4xl md:mx-auto">
       <h1 className="text-xl font-bold mb-4">Bandeja de tareas</h1>
 
       <SearchBar value={inputValue} onChange={setInputValue} />
@@ -36,13 +37,7 @@ function TasksPage() {
 
       <ul className="flex flex-col gap-2 mt-4">
         {sortedTasks.map((task) => (
-          <li key={task.id} onClick={() => openTask(task.id)} className="border rounded p-3">
-            <p className="font-medium">{task.title}</p>
-            <p className="text-sm text-gray-600">
-              {task.assignedTo} | {task.process} | {task.priority} |
-              {task.status} | {formatDate(task.createdAt)}
-            </p>
-          </li>
+          <TaskCard key={task.id} task={task} onClick={() => openTask(task.id)} />
         ))}
       </ul>
 
