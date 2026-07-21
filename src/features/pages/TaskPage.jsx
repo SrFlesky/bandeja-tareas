@@ -30,7 +30,7 @@ function TasksPage() {
   return (
     <div className="px-4 py-4 md:px-8 md:py-6 max-w-4xl md:mx-auto">
 
-      <div className="flex w-full gap-2">
+      <div className="flex items-center whitespace-nowrap w-full gap-2">
         <SearchBar value={inputValue} onChange={setInputValue} />
         <FilterBar filters={filters} toggleFilter={toggleFilter} />
         <SortButton sortOrder={sortOrder} toggleSort={toggleSort} />
