@@ -8,7 +8,7 @@ function SearchBar({ value, onChange }) {
       className="w-full h-11 pl-5 pr-4 bg-page-bg 
       text-sm text-ink-primary placeholder:text-ink-muted 
       rounded-md border border-transparent 
-      focus:outline-none focus:border-brand/40 focus:bg-white transition-colors"
+      focus:outline-none focus:border-tag-red/40 focus:border-[2px] focus:bg-white transition-colors"
     />
   );
 }
