@@ -29,11 +29,11 @@ function FilterBar({ filters, toggleFilter }) {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className={cn(
-          "h-11 px-4 rounded-pill text-sm font-medium transition-colors",
+          "h-11 px-4 rounded-md text-sm font-medium transition-colors",
           "inline-flex items-center gap-1.5 whitespace-nowrap",
           activeCount > 0
             ? "bg-tag-red-bg text-brand border-transparent"
-            : "bg-white text-ink-muted hover:bg-page-bg"
+            : "bg-white text-ink-muted hover:bg-tag-red-bg hover:text-tag-red"
         )}
       >
         <ListFilter className="w-4 h-4" />

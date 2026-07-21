@@ -7,7 +7,7 @@ function SearchBar({ value, onChange }) {
       placeholder="Buscar"
       className="w-full h-11 pl-5 pr-4 bg-page-bg 
       text-sm text-ink-primary placeholder:text-ink-muted 
-      rounded-pill border border-transparent 
+      rounded-md border border-transparent 
       focus:outline-none focus:border-brand/40 focus:bg-white transition-colors"
     />
   );
