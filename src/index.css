@@ -2,7 +2,7 @@
 
 @theme {
   /* Marca */
-  --color-brand: #dc2626;
+  --color-brand: #e30613;
   --color-brand-hover: #b91c1c;
 
   /* Fondo general */
@@ -24,6 +24,10 @@
   --color-tag-blue-bg: #dbeafe;
   --color-tag-gray: #52525b;
   --color-tag-gray-bg: #f4f4f5;
+  --color-tag-purple: #7c3aed;
+  --color-tag-purple-bg: #ede9fe;
+  --color-tag-teal: #0d9488;
+  --color-tag-teal-bg: #ccfbf1;
 
   /* Prioridad */
   --color-priority-high: #dc2626;
