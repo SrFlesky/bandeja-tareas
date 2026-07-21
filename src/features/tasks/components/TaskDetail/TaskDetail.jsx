@@ -1,7 +1,12 @@
 import formatDate from "../../utils/formatDate";
+import { cn } from "../../../../shared/utils/cn";
+import { priorityColors, defaultPriorityColor } from "../../config/priorityColors";
+import { PRIORITY_KEY_BY_LABEL } from "../../../../constants/taskPriority";
 
 function TaskDetail({ task, onClose }) {
   if (!task) return null;
+  const priorityKey = PRIORITY_KEY_BY_LABEL[task.priority];
+  const priorityColor = priorityColors[priorityKey] || defaultPriorityColor;
 
   return (
     <div
@@ -30,31 +35,36 @@ function TaskDetail({ task, onClose }) {
           <p className="text-sm text-gray-700">Estado actual: ...</p>
         </div>
         <div className="grid grid-cols-2 gap-4 mb-6">
-          <div className="bg-page-bg rounded-card p-3">
+          <div className="bg-page-bg rounded-badge p-3">
             <p className="text-xs text-ink-muted mb-1">Proceso</p>
             <p className="text-sm font-semibold text-ink-primary">
               {task.process}
             </p>
           </div>
-          <div className="bg-page-bg rounded-card p-3">
+          <div className="bg-page-bg rounded-badge p-3">
             <p className="text-xs text-ink-muted mb-1">Prioridad</p>
-            <p className="text-sm font-semibold text-ink-primary">
+            <p
+              className={cn(
+                "text-sm font-semibold, rounded-md",
+                priorityColor
+              )}
+            >
               {task.priority}
             </p>
           </div>
-          <div className="bg-page-bg rounded-card p-3">
+          <div className="bg-page-bg rounded-badge p-3">
             <p className="text-xs text-ink-muted mb-1">Responsable</p>
             <p className="text-sm font-semibold text-ink-primary">
               {task.assignedTo}
             </p>
           </div>
-          <div className="bg-page-bg rounded-card p-3">
+          <div className="bg-page-bg rounded-badge p-3">
             <p className="text-xs text-ink-muted mb-1">Estado</p>
             <p className="text-sm font-semibold text-ink-primary">
               {task.status}
             </p>
           </div>
-          <div className="bg-page-bg rounded-card p-3">
+          <div className="bg-page-bg rounded-badge p-3">
             <p className="text-xs text-ink-muted mb-1">Fecha de creación</p>
             <p className="text-sm font-semibold text-ink-primary">
               {formatDate(task.createdAt)}
