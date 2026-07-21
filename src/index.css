@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@theme {
+  /* Marca */
+  --color-brand: #dc2626;
+  --color-brand-hover: #b91c1c;
+
+  /* Fondo general */
+  --color-page-bg: #fafafa;
+
+  /* Escala de grises para texto */
+  --color-ink-primary: #18181b;
+  --color-ink-secondary: #52525b;
+  --color-ink-muted: #a1a1aa;
+
+  /* Categorías/tags (barra lateral + badge a juego) */
+  --color-tag-green: #16a34a;
+  --color-tag-green-bg: #dcfce7;
+  --color-tag-amber: #d97706;
+  --color-tag-amber-bg: #fef3c7;
+  --color-tag-red: #dc2626;
+  --color-tag-red-bg: #fee2e2;
+  --color-tag-blue: #2563eb;
+  --color-tag-blue-bg: #dbeafe;
+  --color-tag-gray: #52525b;
+  --color-tag-gray-bg: #f4f4f5;
+
+  /* Prioridad */
+  --color-priority-high: #dc2626;
+  --color-priority-mid: #d97706;
+  --color-priority-low: #16a34a;
+
+  /* Estado */
+  --color-status-pending: #d97706;
+  --color-status-progress: #2563eb;
+  --color-status-finished: #16a34a;
+
+  /* Radios */
+  --radius-card: 0.75rem;
+  --radius-pill: 9999px;
+}
