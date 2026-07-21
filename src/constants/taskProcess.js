@@ -2,7 +2,7 @@ export const TASK_PROCESS = {
   ACCOUNTING: "Contabilidad",
   COLLECTIONS: "Cartera",
   MARKETING: "Marketing",
-  TI: "TI",
+  IT: "TI",
   LOGISTICS: "Logística",
   TREASURY: "Tesorería",
   AUDIT: "Auditoría",
