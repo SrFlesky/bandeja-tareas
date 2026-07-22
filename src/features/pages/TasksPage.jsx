@@ -4,6 +4,7 @@ import { useTaskFilter } from "../tasks/hooks/useTaskFilter";
 import { useTaskSort } from "../tasks/hooks/useTaskSort";
 import { useSelectedTask } from "../tasks/hooks/useSelectedTask";
 import { usePagination } from "../tasks/hooks/usePagination";
+import { useTaskStore } from "../tasks/store/useTaskStore";
 import SearchBar from "../tasks/components/SearchBar/SearchBar";
 import FilterBar from "../tasks/components/FilterBar/FilterBar";
 import SortButton from "../tasks/components/SortButton/SortButton";
@@ -27,6 +28,7 @@ function TasksPage() {
   const { selectedTask, openTask, closeTask } = useSelectedTask();
   const { editingTask, openEditor, closeEditor } = useTaskEditor();
   const { page, goToPage } = usePagination();
+   const editTask = useTaskStore((state) => state.editTask);
 
   if (loading) return <p>Cargando...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -87,7 +89,7 @@ function TasksPage() {
       </div>
 
       <TaskDetail task={selectedTask} onClose={closeTask} onEdit={openEditor} />
-      <TaskEditModal task={editingTask} onClose={closeEditor} />
+      <TaskEditModal task={editingTask} onClose={closeEditor} onSave={editTask} />
     </div>
   );
 }

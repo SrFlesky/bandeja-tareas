@@ -23,12 +23,13 @@ const selectClass =
 const inputClass =
   "w-full h-11 px-3 rounded-md border border-ink-muted/20 text-sm text-ink-primary focus:outline-none focus:border-brand/40";
 
-function TaskEditModalContent({ task, onClose }) {
+function TaskEditModalContent({ task, onClose, onSave }) {
   const [title, setTitle] = useState(task.title);
   const [process, setProcess] = useState(task.process);
   const [priority, setPriority] = useState(task.priority);
   const [status, setStatus] = useState(task.status);
   const [notes, setNotes] = useState(task.notes || "");
+  const [isSaving, setIsSaving] = useState(false);
 
   const [activityLog, setActivityLog] = useState(
     task.activityLog?.length
@@ -52,6 +53,10 @@ function TaskEditModalContent({ task, onClose }) {
       ...prev,
     ]);
     setNewActivity("");
+  };
+
+  const handleSave = () => {
+    alert("Not yet")
   };
 
   return (
@@ -176,8 +181,11 @@ function TaskEditModalContent({ task, onClose }) {
           Cancelar
         </button>
         <div className="flex gap-2">
-          <button className="h-10 px-4 rounded-sm bg-brand text-white text-sm font-medium hover:bg-brand-hover transition-colors">
-            Guardar
+          <button
+            onClick={handleSave}
+            className="h-10 px-4 rounded-sm bg-brand text-white text-sm font-medium hover:bg-brand-hover transition-colors disabled:opacity-60"
+          >
+            {isSaving ? "Guardando..." : "Guardar"}
           </button>
         </div>
       </div>
