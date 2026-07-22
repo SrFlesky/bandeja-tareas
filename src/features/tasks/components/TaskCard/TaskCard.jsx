@@ -46,7 +46,7 @@ function TaskCard({ task, onClick, onEdit }) {
           </span>
 
           <h3
-            className="text-base font-bold text-ink-primary leading-snug hover:text-brand cursor-pointer mt-1 mb-1"
+            className="inline-block w-fit text-base font-bold text-ink-primary leading-snug hover:text-brand cursor-pointer mt-1 mb-1"
             onClick={(e) => {
               e.stopPropagation();
               onEdit(task.id);
