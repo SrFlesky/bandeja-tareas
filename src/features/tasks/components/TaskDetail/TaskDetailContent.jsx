@@ -26,6 +26,8 @@ function TaskDetailContent({ task, onClose, onEdit }) {
     ? [...task.activityLog].sort((a, b) => new Date(b.date) - new Date(a.date))
     : [{ id: "created", text: "Creación de la tarea", date: task.createdAt }];
 
+  const isPriorityHigh = priorityKey === "HIGH";
+
   return (
     <>
       <div className="flex items-center justify-between px-5 py-4 border-b border-ink-muted/15">
@@ -49,12 +51,12 @@ function TaskDetailContent({ task, onClose, onEdit }) {
           <h1 className="text-xl font-bold text-ink-primary leading-snug mb-2">
             {task.title}
           </h1>
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-2 flex-wrap rounded">
             <span
               className={cn(
-                "text-xs font-medium px-2 py-0.5 rounded-pill border",
-                processColor.text,
-                processColor.bar
+                "text-xs font-medium px-2 py-0.5 rounded-pill",
+                processColor.text
+                //processColor.bar
               )}
             >
               {task.process}
@@ -62,16 +64,16 @@ function TaskDetailContent({ task, onClose, onEdit }) {
             <span
               className={cn(
                 "text-xs font-medium px-2 py-0.5 rounded-pill",
-                priorityColor.badge,
-                priorityColor.text
+                isPriorityHigh && priorityColor.badge,
+                isPriorityHigh && priorityColor.text
               )}
             >
               {task.priority}
             </span>
             <span
               className={cn(
-                "text-xs font-semibold uppercase tracking-wide",
-                statusColor.text
+                "text-xs font-medium px-2 py-0.5 rounded-pill"
+                //statusColor.text
               )}
             >
               {task.status}
@@ -80,13 +82,13 @@ function TaskDetailContent({ task, onClose, onEdit }) {
         </div>
 
         <div className="grid grid-cols-2 gap-3">
-          <div className="bg-page-bg rounded-card p-3">
+          <div className="bg-page-bg rounded-badge p-3">
             <p className="text-xs text-ink-muted mb-1">Responsable</p>
             <p className="text-sm font-semibold text-ink-primary">
               {task.assignedTo}
             </p>
           </div>
-          <div className="bg-page-bg rounded-card p-3">
+          <div className="bg-page-bg rounded-badge p-3">
             <p className="text-xs text-ink-muted mb-1">Fecha límite</p>
             <p className="text-sm font-semibold text-ink-primary">
               {task.dueDate ? formatRelativeDate(task.dueDate) : "Sin definir"}
@@ -99,7 +101,7 @@ function TaskDetailContent({ task, onClose, onEdit }) {
             <p className="text-xs text-ink-muted uppercase tracking-wide mb-1.5">
               Notas
             </p>
-            <p className="text-sm text-ink-secondary bg-page-bg rounded-card p-3 leading-relaxed">
+            <p className="text-sm text-ink-secondary bg-page-bg rounded-badge p-3 leading-relaxed">
               {task.notes}
             </p>
           </div>
@@ -114,7 +116,7 @@ function TaskDetailContent({ task, onClose, onEdit }) {
 
         <button
           onClick={() => onEdit(task.id)}
-          className="w-full h-11 rounded-card bg-brand text-white font-medium hover:bg-brand-hover transition-colors"
+          className="w-full h-11 rounded-sm bg-brand text-white font-medium hover:bg-brand-hover transition-colors"
         >
           Gestionar tarea
         </button>
