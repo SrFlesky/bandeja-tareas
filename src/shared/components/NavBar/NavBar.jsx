@@ -36,24 +36,24 @@ function NavBar({ activePage = "tasks" }) {
           </div>
 
           {/* Navegacion principal */}
-          <div className="flex flex-col gap-2 w-full px-2">
+          <div className="flex flex-col gap-2 w-17 h-17 px-2">
             {navItems.map(({ id, label, icon: Icon }) => {
               const isActive = id === activePage;
               return (
                 <button
                   key={id}
                   className={cn(
-                    "flex flex-col items-center gap-1 py-3 rounded-card transition-colors whitespace-nowrap",
+                    "flex flex-col items-center gap-1 py-3 rounded-md transition-colors whitespace-nowrap",
                     isActive
-                      ? "bg-tag-red-bg text-brand"
-                      : "text-ink-muted hover:bg-tag-red-bg hover:text-tag-red"
+                      ? "bg-tag-red-bg text-brand hover:text-ink-secondary hover:bg-page-bg"
+                      : "text-ink-secondary hover:bg-tag-red-bg hover:text-tag-red"
                   )}
                 >
                   <Icon
                     className="w-5 h-5 shrink-0"
                     strokeWidth={isActive ? 2.5 : 2}
                   />
-                  <span className="text-[11px] font-medium">{label}</span>
+                  {/*<span className="text-[11px] font-medium">{label}</span>*/}
                 </button>
               );
             })}
@@ -63,16 +63,16 @@ function NavBar({ activePage = "tasks" }) {
 
           {/* Notificaciones */}
           <button
-            className="relative w-10 h-10 flex items-center justify-center rounded-full text-ink-muted hover:bg-page-bg hover:text-ink-secondary transition-colors mb-4 shrink-0"
+            className="relative w-10 h-10 flex items-center justify-center rounded-md text-ink-secondary hover:bg-page-bg hover:text-ink-secondary transition-colors mb-4 shrink-0"
             aria-label="Notificaciones"
           >
             <Bell className="w-5 h-5" />
-            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-priority-alta" />
+            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-md bg-priority-alta" />
           </button>
 
           {/* Avatar */}
           <button
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-fill-control text-ink-secondary hover:bg-page-bg transition-colors shrink-0"
+            className="w-10 h-10 flex items-center justify-center rounded-md bg-fill-control text-ink-secondary hover:bg-page-bg transition-colors shrink-0"
             aria-label="Cuenta"
           >
             <User className="w-5 h-5" />
