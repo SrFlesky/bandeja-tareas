@@ -1,62 +1,101 @@
-import { CheckCircle, Archive, Settings, Bell, User } from 'lucide-react';
-import { cn } from '../../utils/cn';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  CheckCircle,
+  Archive,
+  Settings,
+  Bell,
+  User,
+  ChevronRight,
+} from "lucide-react";
+import { cn } from "../../utils/cn";
 
 const navItems = [
-  { id: 'tasks', label: 'Tareas', icon: CheckCircle },
-  { id: 'archive', label: 'Archivo', icon: Archive },
-  { id: 'settings', label: 'Configuración', icon: Settings },
+  { id: "tasks", label: "Tareas", icon: CheckCircle },
+  { id: "archive", label: "Archivo", icon: Archive },
+  { id: "settings", label: "Configuración", icon: Settings },
 ];
 
-function NavBar({ activePage = 'tasks' }) {
+function NavBar({ activePage = "tasks" }) {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   return (
-    <nav className="hidden md:flex flex-col items-center w-25 h-screen bg-white border-r border-ink-muted/10 py-6 shrink-0">
-
-      {/* Logo */}
-      <div className="mb-8">
-        <span className="text-2xl font-bold text-brand">L</span>
-      </div>
-
-      {/* Navegación principal */}
-      <div className="flex flex-col gap-2 w-full px-2">
-        {navItems.map(({ id, label, icon: Icon }) => {
-          const isActive = id === activePage;
-          return (
-            <button
-              key={id}
-              className={cn(
-                'flex flex-col items-center gap-1 py-3 rounded-card transition-colors',
-                isActive
-                  ? 'bg-tag-red-bg text-brand'
-                  : 'text-ink-muted hover:bg-page-bg hover:text-ink-secondary'
-              )}
-            >
-              <Icon className="w-5 h-5" strokeWidth={isActive ? 2.5 : 2} />
-              <span className="text-[11px] font-medium">{label}</span>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Espaciador para empujar lo siguiente hacia abajo */}
-      <div className="flex-1" />
-
-      {/* Notificaciones */}
-      <button
-        className="relative w-10 h-10 flex items-center justify-center rounded-full text-ink-muted hover:bg-page-bg hover:text-ink-secondary transition-colors mb-4"
-        aria-label="Notificaciones"
+    <div className="hidden md:block relative h-screen shrink-0">
+      <motion.nav
+        animate={{ width: isCollapsed ? 0 : 100 }}
+        transition={{ type: "spring", damping: 30, stiffness: 300 }}
+        className="flex flex-col items-center h-screen bg-white border-r border-ink-muted/10 py-6 overflow-hidden"
       >
-        <Bell className="w-5 h-5" />
-        <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-priority-alta" />
-      </button>
+        <div className="flex flex-col items-center w-full min-w-[100px] h-full">
+          {/* Logo */}
+          <div className="mb-8">
+            <span className="text-2xl font-bold text-brand">L</span>
+          </div>
 
-      {/* Avatar de usuario */}
+          {/* Navegacion principal */}
+          <div className="flex flex-col gap-2 w-full px-2">
+            {navItems.map(({ id, label, icon: Icon }) => {
+              const isActive = id === activePage;
+              return (
+                <button
+                  key={id}
+                  className={cn(
+                    "flex flex-col items-center gap-1 py-3 rounded-card transition-colors whitespace-nowrap",
+                    isActive
+                      ? "bg-tag-red-bg text-brand"
+                      : "text-ink-muted hover:bg-page-bg hover:text-ink-secondary"
+                  )}
+                >
+                  <Icon
+                    className="w-5 h-5 shrink-0"
+                    strokeWidth={isActive ? 2.5 : 2}
+                  />
+                  <span className="text-[11px] font-medium">{label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="flex-1" />
+
+          {/* Notificaciones */}
+          <button
+            className="relative w-10 h-10 flex items-center justify-center rounded-full text-ink-muted hover:bg-page-bg hover:text-ink-secondary transition-colors mb-4 shrink-0"
+            aria-label="Notificaciones"
+          >
+            <Bell className="w-5 h-5" />
+            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-priority-alta" />
+          </button>
+
+          {/* Avatar */}
+          <button
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-fill-control text-ink-secondary hover:bg-page-bg transition-colors shrink-0"
+            aria-label="Cuenta"
+          >
+            <User className="w-5 h-5" />
+          </button>
+        </div>
+      </motion.nav>
+
       <button
-        className="w-10 h-10 flex items-center justify-center rounded-full bg-fill-control text-ink-secondary hover:bg-page-bg transition-colors"
-        aria-label="Cuenta"
+        onClick={() => setIsCollapsed((prev) => !prev)}
+        className={cn(
+          "absolute top-1/2 -translate-y-1/2 right-0 z-10 w-5 h-8 bg-white",
+          "border border-ink-muted/15 rounded-full",
+          "flex items-center justify-center text-ink-muted hover:text-ink-primary hover:border-ink-muted/30 hover:bg-page-bg",
+          "shadow-sm transition-all duration-300",
+          isCollapsed ? "translate-x-full" : "translate-x-[10px]"
+        )}
+        aria-label={isCollapsed ? "Expandir menú" : "Colapsar menú"}
       >
-        <User className="w-5 h-5" />
+        <motion.div
+          animate={{ rotate: isCollapsed ? 0 : 180 }}
+          transition={{ duration: 0.2 }}
+        >
+          <ChevronRight className="w-3.5 h-3.5" />
+        </motion.div>
       </button>
-    </nav>
+    </div>
   );
 }
 
