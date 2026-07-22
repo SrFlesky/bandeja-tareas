@@ -12,6 +12,7 @@
 
 ### 1. Clonar el repositorio
 git clone https://github.com/SrFlesky/bandeja-tareas
+
 cd bandeja-tareas
 
 ### 2. Instalar dependencias
