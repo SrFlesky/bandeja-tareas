@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle, Archive, Settings, Menu, X } from "lucide-react";
+import { CheckCircle, Archive, Settings, Menu, X, Bell } from "lucide-react";
 import { cn } from "../../utils/cn";
 
 const navItems = [
@@ -30,7 +30,7 @@ function BottomNav({ activePage = "tasks" }) {
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
-              transition={{ type: "spring", damping: 30, stiffness: 350 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
               className="fixed bottom-16 left-0 right-0 z-40 bg-white rounded-t-2xl border-t border-ink-muted/10 p-3"
             >
               {navItems.map(({ id, label, icon: Icon }) => {
@@ -59,13 +59,22 @@ function BottomNav({ activePage = "tasks" }) {
         )}
       </AnimatePresence>
 
-      <nav className="fixed bottom-0 left-0 right-0 z-30 h-16 bg-white border-t border-ink-muted/10 flex items-center justify-around">
+      <nav className="fixed bottom-0 left-0 right-0 z-50 h-16 bg-white border-t border-ink-muted/10 flex items-center justify-around">
         <button
           onClick={() => setIsOpen((prev) => !prev)}
           className="flex flex-col items-center gap-1 text-ink-secondary min-h-11 min-w-11 justify-center"
         >
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           <span className="text-[10px] font-medium">Menú</span>
+        </button>
+
+        <button
+          className="relative flex flex-col items-center gap-1 text-ink-secondary min-h-11 min-w-11 justify-center"
+          aria-label="Notificaciones"
+        >
+          <Bell className="w-5 h-5" />
+          <span className="absolute top-0.5 right-2.5 w-2 h-2 rounded-full bg-priority-alta" />
+          <span className="text-[10px] font-medium">Alertas</span>
         </button>
       </nav>
     </div>
