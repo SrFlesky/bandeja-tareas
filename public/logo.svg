@@ -1,0 +1,23 @@
+<svg width="160" height="48" viewBox="0 0 160 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Marca: cuadrado redondeado con check -->
+  <rect x="0" y="4" width="40" height="40" rx="10" fill="#dc2626"/>
+  <path
+    d="M12 23.5L18 29.5L29 17"
+    stroke="white"
+    stroke-width="3.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- Wordmark: JM -->
+  <text
+    x="52"
+    y="32"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="26"
+    font-weight="700"
+    fill="#18181b"
+    letter-spacing="0.5"
+  >JM</text>
+</svg>

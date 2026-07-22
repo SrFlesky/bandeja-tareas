@@ -8,15 +8,16 @@
 
 ### Pasos
 
-\`\`\`bash
-# 1. Clonar el repositorio
+##bash
+
+### 1. Clonar el repositorio
 git clone <url-del-repositorio>
 cd <nombre-del-proyecto>
 
-# 2. Instalar dependencias
+### 2. Instalar dependencias
 pnpm install
 
-# 3. Levantar el entorno de desarrollo
+### 3. Levantar el entorno de desarrollo
 pnpm dev
 \`\`\`
 
@@ -24,32 +25,11 @@ Por defecto Vite expone el servidor de desarrollo en `http://localhost:5173`.
 
 ### Scripts disponibles
 
-
-|
- Comando 
-|
- Descripción 
-|
-|
----
-|
----
-|
-|
-`pnpm dev`
-|
- Entorno de desarrollo 
-|
-|
-`pnpm build`
-|
- Build de producción 
-|
-|
-`pnpm preview`
-|
- Sirve el build de producción localmente
-|
+| Comando | Descripción |
+|---|---|
+| `pnpm dev` | Entorno de desarrollo |
+| `pnpm build` | Build de producción |
+| `pnpm preview` | Sirve el build de producción localmente |
 
 ## Arquitectura
 
