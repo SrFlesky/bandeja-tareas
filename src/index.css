@@ -13,31 +13,31 @@
   --color-ink-secondary: #52525b;
   --color-ink-muted: #a1a1aa;
 
-  /* Categorías/tags (barra lateral + badge a juego) */
-  --color-tag-green: #16a34a;
-  --color-tag-green-bg: #dcfce7;
-  --color-tag-amber: #d97706;
-  --color-tag-amber-bg: #fef3c7;
-  --color-tag-red: #dc2626;
-  --color-tag-red-bg: #fee2e2;
-  --color-tag-blue: #2563eb;
-  --color-tag-blue-bg: #dbeafe;
-  --color-tag-gray: #52525b;
-  --color-tag-gray-bg: #f4f4f5;
-  --color-tag-purple: #7c3aed;
-  --color-tag-purple-bg: #ede9fe;
-  --color-tag-teal: #0d9488;
-  --color-tag-teal-bg: #ccfbf1;
+  /* Categorías/tags */
+  --color-tag-green: #047857;
+  --color-tag-green-bg: #ecfdf5;
+  --color-tag-amber: #b45309;
+  --color-tag-amber-bg: #fffbeb;
+  --color-tag-red: #be123c;
+  --color-tag-red-bg: #fff1f2;
+  --color-tag-blue: #0369a1;
+  --color-tag-blue-bg: #f0f9ff;
+  --color-tag-gray: #475569;
+  --color-tag-gray-bg: #f1f5f9;
+  --color-tag-purple: #6d28d9;
+  --color-tag-purple-bg: #f5f3ff;
+  --color-tag-teal: #0f766e;
+  --color-tag-teal-bg: #f0fdfa;
 
   /* Prioridad */
-  --color-priority-high: #dc2626;
-  --color-priority-mid: #d97706;
-  --color-priority-low: #16a34a;
+  --color-priority-high: #be123c;
+  --color-priority-mid: #b45309;
+  --color-priority-low: #047857;
 
   /* Estado */
-  --color-status-pending: #d97706;
-  --color-status-progress: #2563eb;
-  --color-status-finished: #16a34a;
+  --color-status-pending: #b45309;
+  --color-status-progress: #6d28d9;
+  --color-status-finished: #047857;
 
   /* Radios */
   --radius-card: 0rem;
