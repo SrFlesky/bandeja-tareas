@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  /* Tipografía */
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
   /* Marca */
   --color-brand: #e30613;
   --color-brand-hover: #b91c1c;
@@ -45,4 +48,8 @@
   --radius-card: 0rem;
   --radius-badge: 1rem;
   --radius-pill: 9999px;
+}
+
+body {
+  font-family: var(--font-sans);
 }
