@@ -54,7 +54,7 @@ La interacción con una tarea se resuelve en tres vistas independientes: `TaskCa
 
 ## Decisiones técnicas
 
-Detalle completo en [Decisions.md](Decisions.md).
+Detalle completo en [DECISIONS.md](DECISIONS.md).
 
 1. **Paginación client-side sobre un fetch único**: se asume que un backend real ya filtraría por usuario, dejando un volumen manejable para cargar de una vez y paginar/filtrar/ordenar en memoria, evitando latencia de red en cada interacción y quedando la puerta abierta a mover esa lógica a `taskService` si el volumen creciera.
 2. **Tres vistas según el tipo de interacción con la tarea**: separar lectura rápida (`TaskCard`), detalle (`TaskDetail`) y edición (`TaskEditModal`) evita sobrecargar una única superficie con datos y controles que no siempre son relevantes, y permite que cada vista evolucione de forma independiente.
