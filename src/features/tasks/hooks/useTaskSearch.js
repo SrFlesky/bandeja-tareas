@@ -13,6 +13,7 @@ export function useTaskSearch(delay = 300) {
       } else {
         next.delete('search');
       }
+      next.set('page', '1');
       setSearchParams(next, { replace: true });
     }, delay);
 

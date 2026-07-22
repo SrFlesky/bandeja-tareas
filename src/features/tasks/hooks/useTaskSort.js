@@ -7,6 +7,7 @@ export function useTaskSort() {
   const toggleSort = () => {
     const next = new URLSearchParams(searchParams);
     next.set('sort', sortOrder === 'asc' ? 'desc' : 'asc');
+    next.set('page', '1');
     setSearchParams(next);
   };
 

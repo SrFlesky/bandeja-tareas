@@ -18,6 +18,7 @@ export function useTaskFilter() {
     const next = new URLSearchParams(searchParams);
     next.delete(field);
     updated.forEach(v => next.append(field, v));
+    next.set('page', '1');
     setSearchParams(next);
   };
 

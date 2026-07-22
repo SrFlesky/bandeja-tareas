@@ -13,12 +13,14 @@ export function useTaskEditor() {
   const openEditor = (id) => {
     const next = new URLSearchParams(searchParams);
     next.set("edit", id);
+    next.set('page', '1');
     setSearchParams(next);
   };
 
   const closeEditor = () => {
     const next = new URLSearchParams(searchParams);
     next.delete("edit");
+    next.set('page', '1');
     setSearchParams(next);
   };
 
