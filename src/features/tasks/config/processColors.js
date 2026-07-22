@@ -6,11 +6,11 @@ export const processColors = {
   LOGISTICS: { bar: 'border-tag-teal', badge: 'bg-tag-teal-bg', text: 'text-tag-teal' },
   TREASURY: { bar: 'border-tag-green', badge: 'bg-tag-green-bg', text: 'text-tag-green' },
   AUDIT: { bar: 'border-tag-purple', badge: 'bg-tag-purple-bg', text: 'text-tag-purple' },
-  INFRAESTRUCTURE: { bar: 'border-tag-gray', badge: 'bg-tag-gray-bg', text: 'text-tag-gray' },
+  INFRAESTRUCTURE: { bar: 'border-tag-brown', badge: 'bg-tag-brown-bg', text: 'text-tag-brown' },
   LEGAL: { bar: 'border-tag-red', badge: 'bg-tag-red-bg', text: 'text-tag-red' },
 };
 
 export const defaultProcessColor = {
-  bar: 'border-tag-gray',
+  bar: 'border-gray-300',
   badge: 'bg-tag-gray-bg text-tag-gray',
 };
