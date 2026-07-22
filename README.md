@@ -19,7 +19,6 @@ pnpm install
 
 ### 3. Levantar el entorno de desarrollo
 pnpm dev
-\`\`\`
 
 Por defecto Vite expone el servidor de desarrollo en `http://localhost:5173`.
 
