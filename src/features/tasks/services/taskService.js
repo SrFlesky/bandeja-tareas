@@ -12,5 +12,7 @@ export async function fetchTasksById() {
 }
 
 export async function updateTask(id, changes) {
-  tasks = tasks.map((task) => (task.id === id ? { ...task, ...changes } : t));
+  const updated = { ...tasks.find((task) => task.id === id), ...changes };
+  tasks = tasks.map((task) => (task.id === id ? updated : task));
+  return updated;
 }

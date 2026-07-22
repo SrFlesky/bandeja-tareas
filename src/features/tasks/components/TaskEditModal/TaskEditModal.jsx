@@ -21,7 +21,7 @@ function TaskEditModal({ task, onClose, onSave }) {
             onClick={(e) => e.stopPropagation()}
             className="bg-white rounded-md w-full max-w-3xl max-h-[70vh] overflow-y-auto shadow-lg"
           >
-            <TaskEditModalContent key={task.id} task={task} onClose={onClose} onEdit={onSave} />
+            <TaskEditModalContent key={task.id} task={task} onClose={onClose} onSave={onSave} />
           </motion.div>
         </motion.div>
       )}

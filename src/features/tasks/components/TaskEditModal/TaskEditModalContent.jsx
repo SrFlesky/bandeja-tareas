@@ -55,8 +55,14 @@ function TaskEditModalContent({ task, onClose, onSave }) {
     setNewActivity("");
   };
 
-  const handleSave = () => {
-    alert("Not yet")
+  const handleSave = async () => {
+    setIsSaving(true);
+    try {
+      await onSave(task.id, { title, process, priority, status, notes, activityLog });
+      onClose();
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   return (
@@ -183,6 +189,7 @@ function TaskEditModalContent({ task, onClose, onSave }) {
         <div className="flex gap-2">
           <button
             onClick={handleSave}
+            disabled={isSaving}
             className="h-10 px-4 rounded-sm bg-brand text-white text-sm font-medium hover:bg-brand-hover transition-colors disabled:opacity-60"
           >
             {isSaving ? "Guardando..." : "Guardar"}
