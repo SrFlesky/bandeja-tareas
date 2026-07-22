@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "../../../../shared/utils/cn";
 
-function Pagination({ page, totalPages, totalItems, onPageChange }) {
+function Pagination({ page, totalPages, totalItems, onPageChange, className}) {
   const [jumpValue, setJumpValue] = useState("");
 
   if (totalPages <= 1) return null;
@@ -17,7 +17,7 @@ function Pagination({ page, totalPages, totalItems, onPageChange }) {
   };
 
   return (
-    <div className="flex items-center justify-between gap-3 py-1">
+    <div className={cn("flex items-center justify-between gap-3 py-1", className)}>
       <span className="text-xs text-ink-muted whitespace-nowrap">
         {(page - 1) * 20 + 1}–{Math.min(page * 20, totalItems)} de {totalItems}
       </span>

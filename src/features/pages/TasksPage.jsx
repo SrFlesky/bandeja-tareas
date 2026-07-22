@@ -60,6 +60,7 @@ function TasksPage() {
         totalPages={totalPages}
         totalItems={totalItems}
         onPageChange={goToPage}
+        className={cn("transition-all duration-300", selectedTask && "md:mr-96")}
       />
 
       <div
