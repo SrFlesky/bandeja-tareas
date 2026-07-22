@@ -24,22 +24,22 @@
   --color-tag-blue-bg: #f0f9ff;
   --color-tag-gray: #475569;
   --color-tag-gray-bg: #f1f5f9;
-  --color-tag-purple: #6d28d9;
-  --color-tag-purple-bg: #f5f3ff;
+  --color-tag-purple: #7e22ce;
+  --color-tag-purple-bg: #f5eefe;
   --color-tag-teal: #0f766e;
   --color-tag-teal-bg: #f0fdfa;
   --color-tag-brown: #78350f;
   --color-tag-brown-bg: #fdf6ec;
 
   /* Prioridad */
-  --color-priority-high: #be123c;
-  --color-priority-mid: #b45309;
-  --color-priority-low: #047857;
+  --color-priority-high: #e11d48;
+  --color-priority-mid: #d97706;
+  --color-priority-low: #059669;
 
   /* Estado */
-  --color-status-pending: #b45309;
-  --color-status-progress: #581fb2;
-  --color-status-finished: #047857;
+  --color-status-pending: #d97706;
+  --color-status-progress: #7c3aed;
+  --color-status-finished: #059669;
 
   /* Radios */
   --radius-card: 0rem;
