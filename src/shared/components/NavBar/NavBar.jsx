@@ -36,17 +36,15 @@ function NavBar({ activePage = "tasks" }) {
           </div>
 
           {/* Navegacion principal */}
-          <div className="flex flex-col gap-2 w-17 h-17 px-2">
+          <div className="flex flex-col gap-2 px-2">
             {navItems.map(({ id, label, icon: Icon }) => {
               const isActive = id === activePage;
               return (
                 <button
                   key={id}
                   className={cn(
-                    "flex flex-col items-center gap-1 py-3 rounded-md transition-colors whitespace-nowrap",
-                    isActive
-                      ? "bg-tag-red-bg text-brand hover:text-ink-secondary hover:bg-page-bg"
-                      : "text-ink-secondary hover:bg-tag-red-bg hover:text-tag-red"
+                    "w-17 h-17 lg:w-15 lg:h-15 flex items-center justify-center rounded-md transition-colors shrink-0 hover:bg-tag-red-bg hover:text-tag-red",
+                    isActive ? "bg-tag-red-bg text-brand" : "text-ink-secondary"
                   )}
                 >
                   <Icon
@@ -63,7 +61,7 @@ function NavBar({ activePage = "tasks" }) {
 
           {/* Notificaciones */}
           <button
-            className="relative w-13 h-13 px-2 gap-2 flex items-center justify-center rounded-md text-ink-secondary hover:bg-tag-red-bg hover:text-tag-red transition-colors mb-4 shrink-0"
+            className="relative w-17 h-17 lg:w-15 lg:h-15 flex items-center justify-center rounded-md text-ink-secondary hover:bg-tag-red-bg hover:text-tag-red transition-colors mb-4 shrink-0"
             aria-label="Notificaciones"
           >
             <Bell className="w-5 h-5" />
@@ -72,7 +70,7 @@ function NavBar({ activePage = "tasks" }) {
 
           {/* Avatar */}
           <button
-            className="w-13 h-13 px-2 gap-2 flex items-center justify-center rounded-md bg-fill-control text-ink-secondary hover:bg-tag-red-bg hover:text-tag-red transition-colors shrink-0"
+            className="w-17 h-17 lg:w-15 lg:h-15 flex items-center justify-center rounded-md bg-fill-control text-ink-secondary hover:bg-tag-red-bg hover:text-tag-red transition-colors shrink-0"
             aria-label="Cuenta"
           >
             <User className="w-5 h-5" />
