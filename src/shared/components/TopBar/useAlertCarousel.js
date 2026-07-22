@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useAlertCarousel(items, intervalMs = 4000) {
+export function useAlertCarousel(items, intervalMs = 10000) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

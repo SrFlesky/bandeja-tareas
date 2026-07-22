@@ -9,7 +9,7 @@ const iconMap = { RefreshCw, Bell, ShieldCheck };
 
 function TopBar() {
   const { selectedTask } = useSelectedTask();
-  const currentAlert = useAlertCarousel(mockAlerts, 4000);
+  const currentAlert = useAlertCarousel(mockAlerts, 7000);
   const Icon = iconMap[currentAlert.icon];
 
   return (
