@@ -8,7 +8,7 @@ import { PRIORITY_KEY_BY_LABEL } from "../../../../constants/taskPriority";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function TaskDetail({ task, onClose }) {
+function TaskDetail({ task, onClose, onEdit }) {
   if (!task) return null;
   const priorityKey = PRIORITY_KEY_BY_LABEL[task.priority];
   const priorityColor = priorityColors[priorityKey] || defaultPriorityColor;
@@ -95,6 +95,13 @@ function TaskDetail({ task, onClose }) {
                     {formatDate(task.createdAt)}
                   </p>
                 </div>
+
+                <button
+                  onClick={() => onEdit(task.id)}
+                  className="w-full h-11 rounded-card bg-brand text-white font-medium hover:bg-brand-hover mt-2"
+                >
+                  Gestionar tarea
+                </button>
               </div>
             </div>
           </motion.div>
