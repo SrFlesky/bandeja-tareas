@@ -7,7 +7,7 @@ function SortButton({ sortOrder, toggleSort }) {
     <button
       className={cn(
         "h-11 w-30 px-4 rounded-md text-sm font-medium transition-colors",
-        "inline-flex items-center gap-1.5 whitespace-nowrap",
+        "inline-flex justify-center items-center gap-1.5 whitespace-nowrap",
         sortOrder === "asc"
           ? "bg-tag-red-bg text-brand border-transparent"
           : "bg-white text-ink-muted hover:bg-tag-red-bg hover:text-tag-red"
