@@ -6,7 +6,7 @@
   --color-brand-hover: #b91c1c;
 
   /* Fondo general */
-  --color-page-bg: #fafafa;
+  --color-page-bg: #f7f7f7;
 
   /* Escala de grises para texto */
   --color-ink-primary: #18181b;
@@ -28,6 +28,8 @@
   --color-tag-purple-bg: #f5f3ff;
   --color-tag-teal: #0f766e;
   --color-tag-teal-bg: #f0fdfa;
+  --color-tag-brown: #78350f;
+  --color-tag-brown-bg: #fdf6ec;
 
   /* Prioridad */
   --color-priority-high: #be123c;
@@ -36,7 +38,7 @@
 
   /* Estado */
   --color-status-pending: #b45309;
-  --color-status-progress: #6d28d9;
+  --color-status-progress: #581fb2;
   --color-status-finished: #047857;
 
   /* Radios */
