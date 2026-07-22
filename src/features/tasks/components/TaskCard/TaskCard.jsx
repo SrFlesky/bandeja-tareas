@@ -15,7 +15,7 @@ import { STATUS_KEY_BY_LABEL } from "../../../../constants/taskStatus";
 import { PRIORITY_KEY_BY_LABEL } from "../../../../constants/taskPriority";
 import { Check } from "lucide-react";
 
-function TaskCard({ task, onClick }) {
+function TaskCard({ task, onClick, onEdit }) {
   const processKey = PROCESS_KEY_BY_LABEL[task.process];
   const processColor = processColors[processKey] || defaultProcessColor;
 
@@ -37,7 +37,15 @@ function TaskCard({ task, onClick }) {
       )}
     >
       <div className="flex items-start justify-between mb-1">
-        <h3 className="text-base font-bold text-ink-primary">{task.title}</h3>
+        <h3
+          className="text-base font-bold text-ink-primary leading-snug hover:text-brand cursor-pointer"
+          onClick={(e) => {
+            e.stopPropagation();
+            onEdit(task.id);
+          }}
+        >
+          {task.title}
+        </h3>
         <span className="text-xs text-ink-muted whitespace-nowrap ml-3">
           {formatDate(task.createdAt)}
         </span>
