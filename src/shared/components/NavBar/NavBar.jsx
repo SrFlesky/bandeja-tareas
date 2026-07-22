@@ -63,7 +63,7 @@ function NavBar({ activePage = "tasks" }) {
 
           {/* Notificaciones */}
           <button
-            className="relative w-10 h-10 flex items-center justify-center rounded-md text-ink-secondary hover:bg-page-bg hover:text-ink-secondary transition-colors mb-4 shrink-0"
+            className="relative w-10 h-10 flex items-center justify-center rounded-md text-ink-secondary hover:bg-tag-red-bg hover:text-tag-red transition-colors mb-4 shrink-0"
             aria-label="Notificaciones"
           >
             <Bell className="w-5 h-5" />
@@ -72,7 +72,7 @@ function NavBar({ activePage = "tasks" }) {
 
           {/* Avatar */}
           <button
-            className="w-10 h-10 flex items-center justify-center rounded-md bg-fill-control text-ink-secondary hover:bg-page-bg transition-colors shrink-0"
+            className="w-10 h-10 flex items-center justify-center rounded-md bg-fill-control text-ink-secondary hover:bg-tag-red-bg hover:text-tag-red transition-colors shrink-0"
             aria-label="Cuenta"
           >
             <User className="w-5 h-5" />
