@@ -31,7 +31,7 @@ function TaskCard({ task, onClick }) {
     <div
       onClick={onClick}
       className={cn(
-        "bg-white rounded-card border-l-4 p-4 cursor-pointer",
+        "bg-white rounded-card border-l-4 pl-5 pr-5 pt-1 pb-1 cursor-pointer",
         "hover:bg-page-bg transition-colors",
         processColor.bar
       )}
@@ -50,7 +50,7 @@ function TaskCard({ task, onClick }) {
 
         <span
           className={cn(
-            "text-xs font-medium px-2 py-0.5 rounded-pill",
+            "hidden md:inline-block text-xs font-medium px-2 py-0.5 rounded-pill",
             processColor.text
           )}
         >
@@ -77,9 +77,7 @@ function TaskCard({ task, onClick }) {
             <span
               className={cn(
                 "text-[9px] w-6 text-right",
-                isInProgress
-                  ? "invisible"
-                  : isCompleted
+                isInProgress || isCompleted
                   ? "text-transparent"
                   : "text-ink-muted"
               )}
@@ -108,20 +106,15 @@ function TaskCard({ task, onClick }) {
                 )}
               </div>
             </div>
-            {!isInProgress && (
-              <span
-                className={cn(
-                  "text-[9px] w-8",
-                  isInProgress
-                    ? "invisible"
-                    : isCompleted
-                    ? "text-status-completada"
-                    : "text-transparent"
-                )}
-              >
-                100%
-              </span>
-            )}
+
+            <span
+              className={cn(
+                "text-[9px] w-8",
+                !isCompleted ? "text-transparent" : "text-ink-muted"
+              )}
+            >
+              100%
+            </span>
           </div>
         </div>
       </div>

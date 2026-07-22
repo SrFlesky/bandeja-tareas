@@ -40,7 +40,7 @@
   --color-status-finished: #16a34a;
 
   /* Radios */
-  --radius-card: 0.35rem;
+  --radius-card: 0rem;
   --radius-badge: 1rem;
   --radius-pill: 9999px;
 }

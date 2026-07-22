@@ -43,10 +43,10 @@ function TasksPage() {
         </div>
       </div>
 
-      <ul className="flex flex-col gap-2 mt-4">
+      <ul className="">
         <div
           className={cn(
-            "transition-all duration-300",
+            "flex flex-col mt-4 gap-2 transition-all duration-300",
             selectedTask && "md:mr-96"
           )}
         >
