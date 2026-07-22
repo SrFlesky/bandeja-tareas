@@ -7,6 +7,7 @@ const navItems = [
   { id: "tasks", label: "Tareas", icon: CheckCircle },
   { id: "archive", label: "Archivo", icon: Archive },
   { id: "settings", label: "Configuración", icon: Settings },
+  { id: "alerts", label: "Alertas", icon: Bell }
 ];
 
 function BottomNav({ activePage = "tasks" }) {
@@ -66,15 +67,6 @@ function BottomNav({ activePage = "tasks" }) {
         >
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           <span className="text-[10px] font-medium">Menú</span>
-        </button>
-
-        <button
-          className="relative flex flex-col items-center gap-1 text-ink-secondary min-h-11 min-w-11 justify-center"
-          aria-label="Notificaciones"
-        >
-          <Bell className="w-5 h-5" />
-          <span className="absolute top-0.5 right-2.5 w-2 h-2 rounded-full bg-priority-alta" />
-          <span className="text-[10px] font-medium">Alertas</span>
         </button>
       </nav>
     </div>
