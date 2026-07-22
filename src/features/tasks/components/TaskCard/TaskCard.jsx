@@ -40,7 +40,7 @@ function TaskCard({ task, onClick, onEdit }) {
     >
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4">
         {/* Contenido principal */}
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0 flex flex-col">
           <span className="text-[11px] font-medium text-ink-muted uppercase tracking-wide">
             {formatRelativeDate(task.createdAt)}
           </span>
