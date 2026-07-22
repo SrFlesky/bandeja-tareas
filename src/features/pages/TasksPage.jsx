@@ -12,6 +12,7 @@ import { searchTasks } from "../tasks/utils/searchTasks";
 import { filterTasks } from "../tasks/utils/filterTasks";
 import { sortTasks } from "../tasks/utils/sortTasks";
 import formatDate from "../tasks/utils/formatDate";
+import { cn } from "../../shared/utils/cn";
 
 function TasksPage() {
   const { tasks, loading, error } = useTasks();
@@ -28,22 +29,35 @@ function TasksPage() {
   const sortedTasks = sortTasks(filteredTasks, sortOrder);
 
   return (
-    <div className="px-4 py-4 md:px-8 md:py-6 max-w-4xl md:mx-auto">
-
-      <div className="flex items-center whitespace-nowrap w-full gap-2">
-        <SearchBar value={inputValue} onChange={setInputValue} />
-        <FilterBar filters={filters} toggleFilter={toggleFilter} />
-        <SortButton sortOrder={sortOrder} toggleSort={toggleSort} />
+    <div className="px-4 py-4 md:px-8 md:py-6 md:mx-auto">
+      <div
+        className={cn(
+          "transition-all duration-300",
+          selectedTask && "md:mr-96"
+        )}
+      >
+        <div className="flex items-center whitespace-nowrap w-full gap-2">
+          <SearchBar value={inputValue} onChange={setInputValue} />
+          <FilterBar filters={filters} toggleFilter={toggleFilter} />
+          <SortButton sortOrder={sortOrder} toggleSort={toggleSort} />
+        </div>
       </div>
 
       <ul className="flex flex-col gap-2 mt-4">
-        {sortedTasks.map((task) => (
-          <TaskCard
-            key={task.id}
-            task={task}
-            onClick={() => openTask(task.id)}
-          />
-        ))}
+        <div
+          className={cn(
+            "transition-all duration-300",
+            selectedTask && "md:mr-96"
+          )}
+        >
+          {sortedTasks.map((task) => (
+            <TaskCard
+              key={task.id}
+              task={task}
+              onClick={() => openTask(task.id)}
+            />
+          ))}
+        </div>
       </ul>
 
       <TaskDetail task={selectedTask} onClose={closeTask} />
