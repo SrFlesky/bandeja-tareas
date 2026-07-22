@@ -24,12 +24,15 @@ function NavBar({ activePage = "tasks" }) {
       <motion.nav
         animate={{ width: isCollapsed ? 0 : 100 }}
         transition={{ type: "spring", damping: 30, stiffness: 300 }}
-        className="flex flex-col items-center h-screen bg-white border-r border-ink-muted/10 py-6 overflow-hidden"
+        className={cn(
+          "hidden md:flex flex-col items-center h-screen bg-white overflow-hidden shrink-0 py-6",
+          !isCollapsed && "border-r border-ink-muted/10"
+        )}
       >
         <div className="flex flex-col items-center w-full min-w-[100px] h-full">
           {/* Logo */}
           <div className="mb-8">
-            <span className="text-2xl font-bold text-brand">L</span>
+            <span className="text-2xl font-bold text-brand">JM</span>
           </div>
 
           {/* Navegacion principal */}
@@ -43,7 +46,7 @@ function NavBar({ activePage = "tasks" }) {
                     "flex flex-col items-center gap-1 py-3 rounded-card transition-colors whitespace-nowrap",
                     isActive
                       ? "bg-tag-red-bg text-brand"
-                      : "text-ink-muted hover:bg-page-bg hover:text-ink-secondary"
+                      : "text-ink-muted hover:bg-tag-red-bg hover:text-tag-red"
                   )}
                 >
                   <Icon
