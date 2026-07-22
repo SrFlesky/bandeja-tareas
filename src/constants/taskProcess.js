@@ -1,14 +1,15 @@
 export const TASK_PROCESS = {
-  ACCOUNTING: "Contabilidad",
-  COLLECTIONS: "Cartera",
-  MARKETING: "Marketing",
-  IT: "TI",
-  LOGISTICS: "Logística",
-  TREASURY: "Tesorería",
-  AUDIT: "Auditoría",
-  INFRASTRUCTURE: "Infraestructura",
-  LEGAL: "Legal",
-  OTHER: "Others",
+  ACCOUNTING: 'Contabilidad',
+  COLLECTIONS: 'Cartera',
+  MARKETING: 'Marketing',
+  IT: 'TI',
+  LOGISTICS: 'Logística',
+  TREASURY: 'Tesorería',
+  AUDIT: 'Auditoría',
+  INFRAESTRUCTURE: 'Infraestructura',
+  LEGAL: 'Legal',
+  PROCUREMENT: 'Compras',
+  CUSTOMER_SERVICE: 'Servicio al Cliente',
 };
 
 export const TASK_PROCESS_LIST = Object.values(TASK_PROCESS);
