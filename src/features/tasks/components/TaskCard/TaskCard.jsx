@@ -31,7 +31,7 @@ function TaskCard({ task, onClick, onEdit }) {
     <div
       onClick={onClick}
       className={cn(
-        "bg-white rounded-card border-l-4 pl-5 pr-5 pt-1 pb-1 cursor-pointer",
+        "bg-white rounded-l-md border-l-4 pl-5 pr-5 pt-1 pb-1 cursor-pointer",
         "hover:bg-page-bg transition-colors",
         processColor.bar
       )}
