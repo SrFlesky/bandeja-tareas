@@ -61,7 +61,7 @@ Detalle completo en [Decisions.md](Decisions.md).
 
 ## Mejoras futuras
 
-- Persistencia real de cambios: la edición de tareas no está activa de momento, pero podría generar cambios sea en memoria, en el mockData o conectarse a una BD real.
+- Persistencia real de cambios: la edición de tareas solo tiene persistencia hasta recargar, es decir, solo en memoria local. Pero podría conectarse con el MockData o  a una BD real.
 - Migración a paginación/filtrado server-side si el volumen de tareas por usuario lo exigiera.
 - Conexión del registro de actividdades con la barra de progreso: Que exista una forma en que al completarse o se realice un progreso de actividad dentro de la tarea se re defina también el progreso y que esté renderizado con un porcentaje más realista. No harcodeado en 50%.
 - Poder archivar las tareas completadas, para que dejen de renderizarse en el primer fetch y solicitarse de forma independiente cuando son requeridas.
